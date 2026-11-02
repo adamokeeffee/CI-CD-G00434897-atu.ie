@@ -10,7 +10,7 @@ class WorkDB(Base):
     equipment_id:Mapped[int] = mapped_column(
         Integer,unique= True, nullable=False
     )
-    borrower_name:Mapped[int] = mapped_column(String(2,60), nullable= False)
-    loan_days:Mapped[int] = mapped_column(Integer(1,14),nullable= False )
-    purpose:Mapped[str] = mapped_column(String(5,100), nullable= False)
-    status:Mapped[int] = mapped_column(Integer, nullable=False)
+    borrower_name:Mapped[int] = mapped_column(String(60), nullable= False)
+    loan_days:Mapped[int] = mapped_column(Integer(14),nullable= False )
+    purpose:Mapped[str] = mapped_column(String(100), nullable= False)
+    status:Mapped[bool] = mapped_column(True,False, nullable=False)
