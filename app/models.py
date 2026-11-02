@@ -4,8 +4,8 @@ from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 class Base(DeclarativeBase):
     pass
 
-class WorkDB(Base):
-    __tablename__ = "work"
+class LoanDB(Base):
+    __tablename__ = "Loan"
     id:Mapped[int] = mapped_column(primary_key=True, index=True)
     equipment_id:Mapped[int] = mapped_column(
         Integer,unique= True, nullable=False
